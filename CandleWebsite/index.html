@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personalizează-ți lumânarea</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SCREEN 1 -->
+    <section class="screen active" id="screen1">
+
+        <h1>Alege-ți modelul</h1>
+        <p class="subtitle">Alege modelul preferat pentru lumânarea ta.</p>
+
+        <div class="grid" id="models"></div>
+
+        <button class="next-button" onclick="nextScreen()">
+            Următorul →
+        </button>
+
+    </section>
+
+
+    <!-- SCREEN 2 -->
+    <section class="screen" id="screen2">
+
+        <h1>Alege-ți culoarea</h1>
+        <p class="subtitle">Alege culoarea lumânării.</p>
+
+        <div class="grid" id="colors"></div>
+
+        <button class="back-button" onclick="previousScreen()">
+            ← Înapoi
+        </button>
+
+        <button class="next-button" onclick="nextScreen()">
+            Următorul →
+        </button>
+
+    </section>
+
+
+    <!-- SCREEN 3 -->
+    <section class="screen" id="screen3">
+
+        <h1>Alege-ți parfumul</h1>
+        <p class="subtitle">Alege parfumul preferat.</p>
+
+        <div class="grid" id="perfumes"></div>
+
+        <button class="back-button" onclick="previousScreen()">
+            ← Înapoi
+        </button>
+
+        <button class="next-button" onclick="nextScreen()">
+            Vezi lumânarea →
+        </button>
+
+    </section>
+
+
+    <!-- SCREEN 4 -->
+    <section class="screen" id="screen4">
+
+        <h1>✨ Lumânarea ta</h1>
+
+        <div class="final-card">
+
+            <img id="finalImage" src="" alt="Lumânarea personalizată">
+
+            <div class="details">
+                <p><strong>Model:</strong> <span id="finalModel"></span></p>
+                <p><strong>Culoare:</strong> <span id="finalColor"></span></p>
+                <p><strong>Parfum:</strong> <span id="finalPerfume"></span></p>
+            </div>
+
+        </div>
+
+        <button class="back-button" onclick="previousScreen()">
+            ← Modifică
+        </button>
+
+        <button class="restart-button" onclick="restart()">
+            🔄 Începe din nou
+        </button>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
