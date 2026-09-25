@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f5f7fb;
+    color: #222;
+    min-height: 100vh;
+}
+
+
+/* SCREENS */
+
+.screen {
+    display: none;
+    min-height: 100vh;
+    padding: 35px 25px 100px;
+    text-align: center;
+}
+
+.screen.active {
+    display: block;
+}
+
+
+/* TITLES */
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+
+/* ITEM GRID */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+/* ITEM */
+
+.item {
+    background: white;
+    border: 3px solid transparent;
+    border-radius: 18px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+.item:hover {
+    transform: translateY(-3px);
+}
+
+.item.selected {
+    border-color: #1877f2;
+    box-shadow: 0 0 0 3px rgba(24,119,242,0.15);
+}
+
+.item img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.item-name {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+
+/* BUTTONS */
+
+.next-button,
+.back-button,
+.restart-button {
+    position: fixed;
+    bottom: 20px;
+    border: none;
+    border-radius: 14px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.next-button {
+    right: 20px;
+    background: #1877f2;
+    color: white;
+}
+
+.back-button {
+    left: 20px;
+    background: white;
+    color: #333;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.restart-button {
+    right: 20px;
+    background: #1877f2;
+    color: white;
+}
+
+
+/* FINAL PAGE */
+
+.final-card {
+    background: white;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.final-card img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 18px;
+}
+
+.details {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* PHONE */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .item img {
+        height: 140px;
+    }
+
+    .screen {
+        padding: 25px 15px 100px;
+    }
+}
